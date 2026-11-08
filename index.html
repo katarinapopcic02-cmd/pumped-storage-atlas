@@ -91,6 +91,12 @@ h2{font-family:var(--f-display);font-weight:600;font-size:26px;margin:0}
 .bob{animation:bob 1.2s ease-in-out infinite}
 @keyframes bob{50%{transform:translate(8px,6px)}}
 .lever:focus-visible circle:first-child{stroke:#d4541c;stroke-width:3px;stroke-dasharray:6 4}
+#vsvg .poles{transform-box:view-box}
+#vsvg.running .poles{animation:spin .22s linear infinite}
+@keyframes spin{to{transform:translateX(7.6px)}}
+#vsvg .current{opacity:0}
+#vsvg.running .current{opacity:1;animation:flow .5s linear infinite}
+@keyframes flow{to{stroke-dashoffset:20}}
 .d-state{border-left:3px solid var(--accent);padding-left:10px;font-size:15px}
 .scalebar{position:absolute;left:14px;bottom:14px;font:12px var(--f-mono);color:#18232c;background:rgba(255,255,255,.88);padding:6px 8px 4px;border-radius:3px}
 .scalebar .bar{height:6px;border:1.5px solid #18232c;border-top:0;margin-top:3px;background:linear-gradient(90deg,#18232c 50%,transparent 50%)}
@@ -113,7 +119,7 @@ h2{font-family:var(--f-display);font-weight:600;font-size:26px;margin:0}
   .hint{display:none}
   .badge-nts{max-width:calc(100% - 28px)!important}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}.bob{animation:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.bob{animation:none}#vsvg.running .poles{animation-duration:1.2s}#vsvg.running .current{animation:none}}
 </style>
 
 </head>
@@ -1328,7 +1334,7 @@ h2{font-family:var(--f-display);font-weight:600;font-size:26px;margin:0}
             <path d="M1048.705,229.481L1048.705,239.802" style="fill:none;fill-rule:nonzero;stroke:rgb(90,160,50);stroke-width:0.6px;stroke-linejoin:miter;stroke-miterlimit:4;"/>
             <path d="M1069.253,229.481L1069.253,239.802" style="fill:none;fill-rule:nonzero;stroke:rgb(90,160,50);stroke-width:0.6px;stroke-linejoin:miter;stroke-miterlimit:4;"/>
             <path d="M1086.529,229.481L1086.529,239.802" style="fill:none;fill-rule:nonzero;stroke:rgb(90,160,50);stroke-width:0.6px;stroke-linejoin:miter;stroke-miterlimit:4;"/>
-            <path d="M1051.346,229.481L1051.346,239.802" style="fill:none;fill-rule:nonzero;stroke:rgb(90,160,50);stroke-width:0.6px;stroke-linejoin:miter;stroke-miterlimit:4;"/>
+            <path d="M1051.346,229.481L1051.346,239.802" style="fill:none;fill-rule:nonzero;stroke:rgb(90,160,50);stroke-width:0.6px;stroke-linejoin:miter;stroke-miterlimit:4;"/><path class="current" d="M1092.937,227.321L1040.13,227.321C1030.049,227.321 1019.391,231.885 1012.19,240.286L1005.637,246.89C1005.637,246.89 1003.392,249.276 1001.891,250.871C1001.044,251.771 1000.573,252.961 1000.575,254.197C1000.587,265.417 1000.65,321.897 1000.65,321.897C1000.65,329.098 998.186,332.455 990.985,332.455L972.442,332.455" style="fill:none;stroke:rgb(255,226,0);stroke-width:2.4px;stroke-linecap:round;stroke-dasharray:4 6"/><path class="current" d="M1092.937,229.481L1040.13,229.481C1034.039,229.481 1027.741,231.764 1022.139,235.463C1018.468,237.887 1015.314,241.016 1011.95,244.171C1011.95,244.171 1007.792,248.444 1005.063,251.247C1003.574,252.777 1002.747,254.831 1002.76,256.966C1002.845,270.782 1003.165,322.853 1003.165,322.853C1003.165,332.214 997.884,334.614 992.844,334.614L972.441,334.614" style="fill:none;stroke:rgb(255,226,0);stroke-width:2.4px;stroke-linecap:round;stroke-dasharray:4 6"/>
         </g>
         <g id="kventilation">
             <path d="M1030.031,192.2L1030.105,165.602L1010.654,155.395L984.847,150.003L945.559,149.425" style="fill:none;stroke:rgb(232,138,64);stroke-width:3px;"/>
@@ -1378,24 +1384,7 @@ h2{font-family:var(--f-display);font-weight:600;font-size:26px;margin:0}
         <path d="M933.052,415.502L955.773,415.502" style="fill:none;stroke:black;stroke-width:1px;"/>
         <path d="M934.263,415.502L934.263,423.176L938.871,426.234L938.937,449.132" style="fill:none;stroke:black;stroke-width:1px;"/>
         <path d="M954.252,415.502L954.252,422.778L949.18,426.497L949.18,449.132" style="fill:none;stroke:black;stroke-width:1px;"/>
-        <g transform="matrix(1.850339,0,0,1.017989,392.500175,-8.504157)">
-            <rect x="287.05" y="372" width="22.72" height="43.6" style="fill:rgb(231,15,29);stroke:black;stroke-width:0.67px;"/>
-        </g>
-        <g transform="matrix(1.328613,0,0,0.958521,574.999324,106.752929)">
-            <path d="M266.838,274.835L266.838,321.042" style="fill:none;stroke:black;stroke-width:0.86px;"/>
-        </g>
-        <g transform="matrix(1.328613,0,0,0.958521,582.816883,106.752929)">
-            <path d="M266.838,274.835L266.838,321.042" style="fill:none;stroke:black;stroke-width:0.86px;"/>
-        </g>
-        <g transform="matrix(1.328613,0,0,0.958521,590.136078,106.752929)">
-            <path d="M266.838,274.835L266.838,321.042" style="fill:none;stroke:black;stroke-width:0.86px;"/>
-        </g>
-        <g transform="matrix(1.328613,0,0,0.958521,597.390832,106.846864)">
-            <path d="M266.838,274.835L266.838,321.042" style="fill:none;stroke:black;stroke-width:0.86px;"/>
-        </g>
-        <g transform="matrix(1.328613,0,0,0.958521,605.072336,106.350158)">
-            <path d="M266.838,274.835L266.838,321.042" style="fill:none;stroke:black;stroke-width:0.86px;"/>
-        </g>
+        <g id="krotor"><clipPath id="krotorclip"><rect x="923.62" y="370.18" width="42.04" height="44.38"/></clipPath><rect x="923.62" y="370.18" width="42.04" height="44.38" style="fill:rgb(231,15,29)"/><g clip-path="url(#krotorclip)"><g class="poles"><path d="M906.73,370.18L906.73,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M914.33,370.18L914.33,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M921.93,370.18L921.93,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M929.53,370.18L929.53,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M937.13,370.18L937.13,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M944.73,370.18L944.73,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M952.33,370.18L952.33,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M959.93,370.18L959.93,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M967.53,370.18L967.53,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/><path d="M975.13,370.18L975.13,414.56" style="fill:none;stroke:black;stroke-width:1.1px"/></g></g><rect x="923.62" y="370.18" width="42.04" height="44.38" style="fill:none;stroke:black;stroke-width:0.8px"/></g>
         <g transform="matrix(1,0,0,1.020708,655.980745,87.647957)">
             <rect x="324.828" y="267.257" width="4.754" height="55.889" style="fill:rgb(238,231,69);stroke:black;stroke-width:0.45px;"/>
         </g>
@@ -1599,7 +1588,7 @@ const C = [
  {id:"pressure-shaft",name:"Pressure shaft (underground penstock)",zone:'<polygon points="1532,398 1560,408 1742,640 1714,664 1520,426"/>',pin:[1700,538],crop:[1460,360,340,340]},
  {id:"ball-valve",name:"Spherical (ball) valve",valve:true,ready:true,tpl:"tpl-ball",vb:[0,30,900,440],hints:{open:[740,124,612,72],closed:[610,124,488,72]},states:true,zone:'<circle cx="1718.6" cy="653.5" r="13"/><rect x="1462" y="606" width="80" height="78"/>',pin:[1442,648],crop:[1420,580,340,140],
   text:"The ball valve can take large flows and is used to stop the flow completely."},
- {id:"cavern",name:"Power cavern",ready:true,tpl:"tpl-cavern",vb:[0,0,541,751],zone:'<rect x="1710" y="610" width="58" height="90"/>',pin:[1688,700],crop:[1660,560,180,170],
+ {id:"cavern",name:"Power cavern",ready:true,tpl:"tpl-cavern",anim:true,hint:[518,482,318,326],hintScale:0.45,vb:[0,0,541,751],zone:'<rect x="1710" y="610" width="58" height="90"/>',pin:[1688,700],crop:[1660,560,180,170],
   src:"Simplified after Seingre, Ihly & Frei (2011), Geomechanics and Tunnelling 4(6), Fig. 11.",
   scale:364.02/32.10},
  {id:"gate-valve",name:"Gate valve",valve:true,ready:true,tpl:"tpl-gate",vb:[-60,-170,820,1160],hints:{open:[600,340,488,212],closed:[600,340,488,212]},states:true,zone:'<circle cx="1742" cy="674.3" r="13"/><rect x="1798" y="382" width="62" height="150"/>',pin:[1880,404],crop:[1690,360,230,350],
@@ -1706,7 +1695,7 @@ async function openDetail(id,instant){
     base=[...c.crop];
   }
   const nts=$("d-nts"); nts.hidden=!!c.ready&&!c.nts; nts.textContent=c.ready?(c.nts||""):"Detail drawing in preparation · schematic crop, not to scale"; sb.hidden=!c.scale;
-  $("d-state").hidden=true; if(c.states)setState("open");
+  $("d-state").hidden=true; vs.classList.remove("running"); if(c.states)setState("open"); if(c.anim)setupAnim();
   $("d-eyebrow").textContent=`Component ${i+1} of ${C.length}`;
   $("d-title").textContent=c.name;
   const ch=$("d-chip"); ch.className="chip "+(c.ready?"ready":"pending"); ch.textContent=c.ready?"Detail ready":"In preparation";
@@ -1723,11 +1712,20 @@ function setState(k){
   vs.dataset.state=k;
   vs.querySelectorAll('[id$="lever-open"],[id$="lever-closed"]').forEach(l=>{l.classList.add("lever");l.setAttribute("tabindex","0");l.setAttribute("role","button");
     l.setAttribute("aria-label",k==="open"?"Close the valve":"Open the valve");});
-  let h=vs.querySelector(".lever-hint"); if(!h){h=document.createElementNS(NS,"g");h.setAttribute("class","lever-hint");vs.appendChild(h);}
-  const [tx,ty,ex,ey]=cur.hints[k];
-  h.innerHTML=`<g class="bob"><path d="M${tx},${ty}Q${tx-10},${ey} ${ex+16},${ey}" style="fill:none;stroke:#d4541c;stroke-width:5px;stroke-linecap:round"/><path d="M${ex},${ey}L${ex+20},${ey-11}L${ex+20},${ey+11}Z" style="fill:#d4541c"/></g>`;
+  drawHint(cur.hints[k],1);
 }
-function toggleValve(){if(cur&&cur.states)setState(vs.dataset.state==="open"?"closed":"open");}
+function drawHint(arr,sc){
+  let h=vs.querySelector(".lever-hint"); if(!h){h=document.createElementNS(NS,"g");h.setAttribute("class","lever-hint");vs.appendChild(h);}
+  const [tx,ty,ex,ey]=arr;
+  h.innerHTML=`<g transform="translate(${ex},${ey}) scale(${sc}) translate(${-ex},${-ey})"><g class="bob"><path d="M${tx},${ty}Q${tx-10},${ey} ${ex+16},${ey}" style="fill:none;stroke:#d4541c;stroke-width:5px;stroke-linecap:round"/><path d="M${ex},${ey}L${ex+20},${ey-11}L${ex+20},${ey+11}Z" style="fill:#d4541c"/></g></g>`;
+}
+function setupAnim(){
+  vs.classList.remove("running");
+  const r=vs.querySelector('[id$="rotor"]'); if(!r)return;
+  r.classList.add("lever"); r.setAttribute("tabindex","0"); r.setAttribute("role","button"); r.setAttribute("aria-label","Start or stop the generator");
+  drawHint(cur.hint,cur.hintScale||1);
+}
+function toggleValve(){if(!cur)return; if(cur.anim){vs.classList.toggle("running");return;} if(cur.states)setState(vs.dataset.state==="open"?"closed":"open");}
 vs.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.closest&&e.target.closest(".lever")){e.preventDefault();toggleValve();}});
 function closeDetail(){
   if(V.hidden)return; V.hidden=true; document.body.style.overflow=""; cur=null;
